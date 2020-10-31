@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./../styles/App.css";
 
 function App() {
-  const initiallist = ["buy milk", "buy vegetable"];
-  const [list, setList] = useState(initiallist);
+  // const initiallist = ["buy milk", "buy vegetable"];
+  const [list, setList] = useState([]);
   const [inputValue, setInput] = useState("");
   const handleClick = () => {
     console.log("clicked");
