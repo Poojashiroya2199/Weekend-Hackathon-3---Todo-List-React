@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import "./../styles/App.css";
 
 function App() {
-  //const initiallist = ["buymilk", "buyapple", "buypen"];
-  const [list, setList] = useState([]);
+  const initiallist = ["buy milk", "buy vegetable"];
+  const [list, setList] = useState(initiallist);
   const [inputValue, setInput] = useState("");
   const handleClick = () => {
     console.log("clicked");
     const copy = list.slice();
-    copy.push(inputValue);
 
+    if (!isEmpty(inputValue)) copy.push(inputValue);
+
+    console.log(copy);
     setList(copy);
+
+    setInput("");
   };
+  const isEmpty = (val) => !val || !val.trim();
   const onChange = (e) => {
     setInput(e.target.value);
   };
