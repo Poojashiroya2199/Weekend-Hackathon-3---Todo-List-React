@@ -95,7 +95,7 @@ function App() {
         </button>
       </div>
       <br />
-      <div>
+      <div className="list">
         <ol>
           {listItem.map((itemval, index) => {
             return (
